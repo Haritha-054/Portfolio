@@ -862,7 +862,7 @@ html, body, #root {
   line-height: 1.9;
 }
 
-@media(max-width:600px) {
+@media (max-width: 768px) {
   #nav {
     padding: 1rem 1.2rem;
   }
@@ -870,13 +870,35 @@ html, body, #root {
     display: none;
   }
   #s1-text {
-    padding: 0 5vw 10vh;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding: 2rem 1.5rem !important;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.45) 50%, rgba(0, 0, 0, 0.7) 100%) !important;
   }
-  #scroll-ind {
-    display: none;
+  #ct4 {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   .cin-ctas {
-    flex-direction: column;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 0.8rem !important;
+    margin-top: 1.5rem !important;
+  }
+  .cin-ctas a {
+    width: 100% !important;
+    max-width: 280px !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  #haritha-portrait-main {
+    opacity: 0.22 !important; /* low opacity so text is fully legible */
+    filter: brightness(0.35) contrast(1.1) !important;
+  }
+  #scroll-ind {
+    display: none !important;
   }
 }
 
@@ -1710,6 +1732,10 @@ body.scroll-active, html.scroll-active, #root.scroll-active {
   align-items: center;
 }
 
+.s3-mobile-calendar {
+  display: none;
+}
+
 /* Temporary 3D Calendar */
 .s3-calendar-3d {
   width: 100%;
@@ -1886,38 +1912,56 @@ body.scroll-active, html.scroll-active, #root.scroll-active {
 
 /* ══ MOBILE ══ */
 @media (max-width: 768px) {
-  .s3-panel {
-    flex-direction: column;
-    max-height: 80vh;
-    overflow-y: auto;
+  /* Scene 3 Mobile Layout overrides */
+  .s3-section {
+    padding: 6vh 1.2rem !important;
+    height: auto !important;
+    min-height: auto !important;
   }
-  .s3-panel--junior {
-    flex-direction: column-reverse;
+  .s3-cards-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    gap: 2.5rem !important;
+    margin-top: 1.5rem !important;
+    align-items: center !important;
   }
-  .s3-panel-image {
-    width: 100%;
-    height: 180px;
-    flex-shrink: 0;
+  .s3-desktop-calendar {
+    display: none !important;
   }
-  .s3-panel-content {
-    border-left: none !important;
-    border-right: none !important;
-    border-top: 1px solid rgba(255, 215, 0, 0.12);
-    padding: 1.4rem 1.2rem;
-    gap: 0.45rem;
+  .s3-mobile-calendar {
+    display: flex !important;
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin-bottom: 1rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+    opacity: 0;
   }
-  .s3-highlights--two-col {
-    grid-template-columns: 1fr;
+  .s3-calendar-3d {
+    max-width: 220px !important;
   }
-  .s3-year-number {
-    font-size: clamp(6.5rem, 30vw, 9rem);
-    opacity: 0.12;
+  .s3-milestone-item {
+    position: relative !important;
+    width: 100% !important;
+    height: auto !important;
+    top: auto !important;
+    left: auto !important;
+    padding: 0 !important;
+    transform: none !important;
+    display: flex !important;
+    justify-content: center !important;
+    opacity: 0;
   }
-  .s3-future-blur-years {
-    gap: 0.8rem;
+  .s3-rail-container {
+    display: none !important; /* Hide horizontal timeline rail on mobile */
   }
-  .s3-future-blur-years span {
-    font-size: clamp(2rem, 10vw, 4rem);
+  .s3-card {
+    max-width: 100% !important; /* Stretch card width to fit container margins */
   }
 }
 
